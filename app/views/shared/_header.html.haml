@@ -1,0 +1,40 @@
+.content__header
+  .content__header__menu
+    .content__header__menu__left
+      = link_to root_path class: "content__header__menu__left__link" do
+        .content__header__menu__left__link__home
+          .content__header__menu__left__link__home__icon
+            %i.fa.fa-home.content__header__menu__left__link__home__icon__btn
+          .content__header__menu__left__link__home__text ホーム
+      = link_to root_path class: "content__header__menu__left__link" do
+        .content__header__menu__left__link__moment
+          .content__header__menu__left__link__moment__icon
+            %i.fa.fa-bolt.content__header__menu__left__link__moment__icon__btn
+          .content__header__menu__left__link__moment__text モーメント
+      = link_to root_path class: "content__header__menu__left__link" do
+        .content__header__menu__left__link__notice
+          .content__header__menu__left__link__notice__icon
+            %i.fa.fa-bell-o.content__header__menu__left__link__notice__icon__btn
+          .content__header__menu__left__link__notice__text 通知
+      = link_to root_path class: "content__header__menu__left__link" do
+        .content__header__menu__left__link__message
+          .content__header__menu__left__link__message__icon
+            %i.fa.fa-envelope-o.content__header__menu__left__link__message__icon__btn
+          .content__header__menu__left__link__message__text メッセージ
+    .content__header__menu__center
+      = link_to root_path do
+        .content__header__menu__center__icon
+          %i.fa.fa-twitter.content__header__menu__center__icon__btn
+    .content__header__menu__right
+      = form_for "", class: "content__header__menu__right__form" do |f|
+        .content__header__menu__right__form__search
+          .content__header__menu__right__form__search__textbox
+            = f.text_field :search, placeholder: "キーワード検索", class: "content__header__menu__right__form__search__textbox__inner"
+            .content__header__menu__right__form__search__textbox__icon
+              %i.fa.fa-search.content__header__menu__right__form__search__textbox__icon__btn
+                = f.submit :search, type: "submit", class: "content__header__menu__right__form__search__textbox__icon__btn__send"
+      .content__header__menu__right__profile
+        %i.fa.fa-user-circle.content__header__menu__right__profile__btn
+      .content__header__menu__right__tweet
+        = link_to root_path do
+          = button_tag "ツイート", class: "content__header__menu__right__tweet__btn"

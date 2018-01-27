@@ -1,0 +1,513 @@
+// 全体部分
+.content {
+  width: 100vw;
+  height: 100vh;
+  background-color: #e6ecf0;
+}
+
+// ヘッダー部分
+.content__header {
+  width: 100vw;
+  height: 46px;
+  background-color: white;
+  border-bottom-color: #e6ecf0;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  &__menu {
+    margin: 0 125px;
+    display: flex;
+    text-decoration: none;
+    padding-bottom: 1px;
+    &__left {
+      width: 411px;
+      display: flex;
+      // text-decoration: none;
+      &__link {
+        color: #66757f;
+        text-decoration: none;
+        // padding-bottom: 1px;
+        // display: inline-block;
+        // border-bottom-color: white;
+        &__home {
+          width: 75px;
+          padding-left: 4px;
+          padding-right: 14px;
+          display: flex;
+          text-decoration: none;
+          &__icon {
+            width: 23px;
+            margin-top: 10px;
+            font-size: 21px;
+            text-align: center;
+            text-decoration: none;
+            padding-bottom:1px;
+            display: inline-block;
+            &__btn {
+              color: #66757f;
+              text-decoration: none;
+              border-color: white;
+              display: inline;
+            }
+          }
+          &__text {
+            width: 39px;
+            height: 13px;
+            margin-top: 17px;
+            margin-left: 3px;
+            color: #66757f;
+            font-size: 13px;
+            font-weight: bold;
+            text-decoration: none;
+            display: inline-block;
+            border-bottom-color: white;
+          }
+        }
+      }
+      &__link {
+        color: #66757f;
+        &__moment {
+          width: 101px;
+          padding-left: 4px;
+          padding-right: 14px;
+          display: flex;
+          &__icon {
+            width: 23px;
+            margin-top: 10px;
+            font-size: 21px;
+            text-align: center;
+            &__btn {
+              color: #66757f;
+            }
+          }
+          &__text {
+            width: 65px;
+            height: 13px;
+            margin-top: 17px;
+            margin-left: 3px;
+            color: #66757f;
+            font-size: 13px;
+            font-weight: bold;
+          }
+        }
+      }
+      &__link {
+        color: #66757f;
+        &__notice {
+          width: 62px;
+          padding-left: 4px;
+          padding-right: 14px;
+          display: flex;
+          &__icon {
+            width: 23px;
+            margin-top: 10px;
+            font-size: 21px;
+            text-align: center;
+            &__btn {
+              color: #66757f;
+            }
+          }
+          &__text {
+            width: 26px;
+            height: 13px;
+            margin-top: 17px;
+            margin-left: 3px;
+            color: #66757f;
+            font-size: 13px;
+            font-weight: bold;
+          }
+        }
+      }
+      &__link {
+        color: #66757f;
+        &__message {
+          width: 101px;
+          padding-left: 4px;
+          padding-right: 14px;
+          display: flex;
+          &__icon {
+            width: 23px;
+            margin-top: 10px;
+            font-size: 21px;
+            text-align: center;
+            &__btn {
+              color: #66757f;
+            }
+          }
+          &__text {
+            width: 65px;
+            height: 13px;
+            margin-top: 17px;
+            margin-left: 3px;
+            color: #66757f;
+            font-size: 13px;
+            font-weight: bold;
+          }
+        }
+      }
+    }
+    &__center {
+      display: flex;
+      margin: 10px 200px 0 170px;
+      &__icon {
+        width: 30px;
+        font-size: 21px;
+        color: #1da1f2;
+        text-align: center;
+      }
+    }
+    &__right {
+      width: 374px;
+      display: flex;
+      &__form {
+        width: 221px;
+        &__search {
+          width: 221px;
+          margin-top: 7px;
+          margin-right: 15px;
+          &__textbox {
+            width: 221px;
+            border: 1px;
+            display: flex;
+            &__inner {
+              background-color: #f5f8fa;
+              width: 175px;
+              height: 14px;
+              padding: 8px 32px 8px 12px;
+              border-radius: 21px;
+              font-size: 12px;
+              color: #14171a;
+              display: flex;
+            }
+            &__icon {
+              width: 18px;
+              height: 14px;
+              font-size: 21px;
+              color: #66757f;
+              margin-top: 5px;
+              margin-left: 5px;
+              display: flex;
+              &__btn {
+                &__send {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      &__profile {
+        font-size: 28px;
+        color: #66757f;
+      }
+      &__tweet {
+        margin-top: 8px;
+        margin-left: 16px;
+        &__btn {
+          width: 90px;
+          height: 30px;
+          background-color: #4AB3F4;
+          border-color: #4AB3F4;
+          border-radius: 100px;
+          font-size: 14px;
+          text-align: center;
+          font-weight: bold;
+          line-height: 20px;
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+// サイド部分
+.content__left {
+  width: 300px;
+  margin-top: 10px;
+  margin-left: 125px;
+  float: left;
+  &__profile {
+    width: 300px;
+    height: 250px;
+    &__over {
+      background-color: #1da1f2 !important;
+      height: 90px;
+    }
+    &__middle {
+      width: 300px;
+      background-color: white;
+      &__top {
+        width: 300px;
+        height: 50px;
+        &__imagebox {
+          width: 72px;
+          height: 72px;
+          margin-top: -20px;
+          margin-left: 10px;
+          &__image {
+            border-radius: 50%;
+            border: 2px solid #fff;
+          }
+        }
+      }
+      &__under {
+        width: 150px;
+        height: 50px;
+        margin-left: 90px;
+        margin-top: -10px;
+        &__nickname {
+          height: 25px;
+          font-size: 18px;
+          color: #14171a;
+          font-weight: bold;
+        }
+        &__name {
+          height: 25px;
+          font-size: 14px;
+          color: #6e7a86;
+        }
+      }
+    }
+    &__under {
+      width: 300px;
+      &__tweet {
+        float: left;
+        background-color: white;
+        &__text {
+          width: 85px;
+          color: #657786;
+          font-weight: bold;
+          font-size: 12px;
+          margin-top: 5px;
+          margin-left: 15px;
+        }
+        &__count {
+          width: 85px;
+          color: #1da1f2 !important;
+          font-weight: bold;
+          font-size: 18px;
+          margin-left: 15px;
+          margin-bottom: 10px;
+        }
+      }
+      &__follow {
+        float: left;
+        background-color: white;
+        &__text {
+          width: 85px;
+          color: #657786;
+          font-weight: bold;
+          font-size: 12px;
+          margin-top: 5px;
+          margin-left: 15px;
+        }
+        &__count {
+          width: 85px;
+          color: #1da1f2 !important;
+          font-weight: bold;
+          font-size: 18px;
+          margin-left: 15px;
+          margin-bottom: 10px;
+        }
+      }
+      &__follower {
+        float: left;
+        background-color: white;
+        &__text {
+          width: 85px;
+          color: #657786;
+          font-weight: bold;
+          font-size: 12px;
+          margin-top: 5px;
+          margin-left: 15px;
+        }
+        &__count {
+          width: 85px;
+          color: #1da1f2 !important;
+          font-weight: bold;
+          font-size: 18px;
+          margin-left: 15px;
+          margin-bottom: 10px;
+        }
+      }
+    }
+  }
+}
+
+// body部分
+.content__main {
+  width: 560px;
+  padding: 10px 12px;
+  float: left;
+  &__head {
+    background-color: #E8F5FD;
+    width: 560px;
+    height: 40px;
+    padding: 10px 12px;
+    &__left {
+      width: 50px;
+      height: 50px;
+      float: left;
+      background-color: #E8F5FD;
+      &__profile {
+        padding-left: 20px;
+        padding-top: 5px;
+        &__image {
+          border-radius: 50%;
+        }
+      }
+    }
+    &__right {
+      width: 500px;
+      height: 50px;
+      float: left;
+      &__form {
+        width: 500px;
+        &__text {
+          width: 450px;
+          height: 40px;
+          float: left;
+          padding-left: 10px;
+          &__field {
+            width: 470px;
+            height: 36px;
+            color: #1da1f2;
+            font-size: 14px;
+            padding-left: 3px;
+            border-radius: 10px;
+          }
+        }
+        &__image {
+          float: left;
+          width: 20px;
+          height: 20px;
+          font-size: 40px;
+          color: yellow;
+          &__icon {
+            font-size: 30px;
+            color: yellow;
+            padding-top: 10px;
+            font-family: FontAwesome;
+            content: "\f1c5";
+          }
+        }
+      }
+    }
+  }
+// ツイート部分
+  &__body {
+    background-color: white;
+    width: 560px;
+    height: 100%;
+    padding: 12px 12px;
+    overflow: hidden;
+    &__avater {
+      background-color: white;
+      width: 50px;
+      height: 100%;
+      float: left;
+      margin-right: 10px;
+      &__image {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+      }
+    }
+    &__content {
+      width: 500px;
+      float: left;
+      &__over {
+        width: 500px;
+        overflow: hidden;
+        &__name {
+          color: #14171a;
+          font-size: 14px;
+          font-weight: bold;
+          float: left;
+        }
+        &__nickname {
+          color: #657786;
+          font-size: 14px;
+          float: left;
+          padding-left: 3px;
+        }
+        &__timestamp {
+          color: #657786;
+          font-size: 14px;
+          float: left;
+          padding-left: 10px;
+        }
+        &__menu {
+          color: #657786;
+          float: right;
+        }
+      }
+      &__middle {
+        width: 500px;
+        &__text {
+        width: 500px;
+        color: #141738;
+        font-size: 14px;
+        }
+        &__image {
+        width: 500px;
+        }
+      }
+      &__under {
+        font-size: 16px;
+        font-weight: bold;
+        color: #657786;
+        padding-top: 5px;
+        overflow: hidden;
+        &__reply {
+          width: 80px;
+          height: 20px;
+          float: left;
+          &__icon {
+            float: left;
+          }
+          &__count {
+            font-size: 12px;
+            float: left;
+            padding-left: 5px;
+          }
+        }
+        &__retweet {
+          width: 80px;
+          height: 20px;
+          float: left;
+          &__icon {
+            float: left;
+          }
+          &__count {
+            font-size: 12px;
+            float: left;
+            padding-left: 5px;
+          }
+        }
+        &__like {
+          width: 80px;
+          height: 20px;
+          float: left;
+          &__icon {
+            font-size: 12px;
+            float: left;
+          }
+          &__count {
+            font-size: 12px;
+            float: left;
+            padding-left: 5px;
+          }
+        }
+        &__message {
+          width: 80px;
+          height: 20px;
+          float: left;
+          &__icon {
+            font-size: 12px;
+            float: left;
+          }
+        }
+      }
+    }
+  }
+}
