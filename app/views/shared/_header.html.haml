@@ -31,10 +31,36 @@
           .content__header__menu__right__form__search__textbox
             = f.text_field :search, placeholder: "キーワード検索", class: "content__header__menu__right__form__search__textbox__inner"
             .content__header__menu__right__form__search__textbox__icon
+              = f.submit :search, type: "submit", class: "content__header__menu__right__form__search__textbox__icon__send"
               %i.fa.fa-search.content__header__menu__right__form__search__textbox__icon__btn
-                = f.submit :search, type: "submit", class: "content__header__menu__right__form__search__textbox__icon__btn__send"
       .content__header__menu__right__profile
         %i.fa.fa-user-circle.content__header__menu__right__profile__btn
       .content__header__menu__right__tweet
-        = link_to root_path do
-          = button_tag "ツイート", class: "content__header__menu__right__tweet__btn"
+        / = link_to root_path do
+        = button_tag "ツイート", id: "tweet", class: "content__header__menu__right__tweet__btn"
+        #overlay
+        #modalWindow
+          .modalWindow__header
+            .modalWindow__header__title ツイートする
+            .modalWindow__header__btn#close ×
+          .modalWindow__body
+            = form_for @tweet do |f|
+              .modalWindow__body__icon
+                = image_tag "image6.jpg", width:32, height:32, class: "modalWindow__body__icon__image"
+              / .modalWindow__body__textarea
+              = f.text_field :body, placeholder: "いまどうしてる?", class: "modalWindow__body__textarea"
+              .modalWindow__body__under
+                .modalWindow__body__under__left
+                  %label.modalWindow__body__under__left__image
+                    = f.file_field :image1, class: "modalWindow__body__under__left__image__field"
+                    %i.fa.fa-file-image-o.modalWindow__body__under__left__image__btn{"aria-hidden" => "true"}
+                  .modalWindow__body__under__left__gif
+                    %i.fa.fa-file-video-o.modalWindow__body__under__left__gif__btn{"aria-hidden" => "true"}
+                  .modalWindow__body__under__left__vote
+                    %i.fa.fa-align-left.modalWindow__body__under__left__vote__btn{"aria-hidden" => "true"}
+                  .modalWindow__body__under__left__map
+                    %i.fa.fa-map-marker.modalWindow__body__under__left__map__btn{"aria-hidden" => "true"}
+                .modalWindow__body__under__right
+                  .modalWindow__body__under__right__tweet
+                    = f.submit value: "ツイート", class: "modalWindow__body__under__right__tweet__btn"
+                    / .modalWindow__body__under__right__tweet__btn

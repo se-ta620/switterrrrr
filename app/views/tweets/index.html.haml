@@ -3,45 +3,8 @@
   .content__left
     = render 'shared/left-content'
   .content__main
-    .content__main__head
-      .content__main__head__left
-        .content__main__head__left__profile
-          = image_tag "image6.jpg", width:32, height:32, class: "content__main__head__left__profile__image"
-      .content__main__head__right
-        = form_for "", class: "content__main__head__right__form" do |f|
-          .content__main__head__right__form__text
-            = f.text_field :text, placeholder: "いまどうしてる？", class: "content__main__head__right__form__text__field"
-        .content__main__head__right__image
-          %i.fa.fa-file-image-o.content__main__head__right__image__icon{"aria-hidden" => "true"}
-    .content__main__body
-      .content__main__body__avater
-        = image_tag "image6.jpg", width:48, height:48, class: "content__main__body__avater__image"
-      .content__main__body__content
-        .content__main__body__content__over
-          .content__main__body__content__over__name
-            ドドリア
-          .content__main__body__content__over__nickname
-            @kyui
-          .content__main__body__content__over__timestamp
-            6時間前
-          .content__main__body__content__over__menu
-            %i.fa.fa-angle-down{"aria-hidden" => "true"}
-        .content__main__body__content__middle
-          .content__main__body__content__middle__text
-            今日はいい天気ですね
-          .content__main__body__content__middle__image
-        .content__main__body__content__under
-          .content__main__body__content__under__reply
-            %i.fa.fa-comment-o.content__main__body__content__under__reply__icon{"aria-hidden" => "true"}
-            .content__main__body__content__under__reply__count
-              2
-          .content__main__body__content__under__retweet
-            %i.fa.fa-retweet.content__main__body__content__under__retweet__icon{"aria-hidden" => "true"}
-            .content__main__body__content__under__retweet__count
-              4
-          .content__main__body__content__under__like
-            %i.fa.fa-heart-o.content__main__body__content__under__like__icon{"aria-hidden" => "true"}
-            .content__main__body__content__under__like__count
-              9
-          .content__main__body__content__under__message
-            %i.fa.fa-envelope-o.content__main__body__content__under__message__icon{"aria-hidden" => "true"}
+    = link_to root_path do
+      .content__main__head
+        %i.fa.fa-repeat.content__main__head__repeat{"aria-hidden" => "true"}
+        .content__main__head__text 更新する
+    = render partial: 'shared/tweet-list', collection: @tweets, as: :tweet

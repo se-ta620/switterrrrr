@@ -2,16 +2,16 @@
   .content__left__profile__over
     = link_to root_path class: "content__left__profile__over__link" do
       .content__left__profile__over__link__imagebox
-        = image_tag "image14.jpg", width:300, height:100, class: "content__left__profile__over__link__box__image"
+        = image_tag current_user.back_icon, width:300, height:100, class: "content__left__profile__over__link__box__image"
   .content__left__profile__middle
     .content__left__profile__middle__top
       .content__left__profile__middle__top__imagebox
-        = image_tag "image6.jpg", width:72, height:72, class: "content__left__profile__middle__top__imagebox__image"
+        = image_tag current_user.top_icon, width:72, height:72, class: "content__left__profile__middle__top__imagebox__image"
     .content__left__profile__middle__under
       .content__left__profile__middle__under__nickname
-        ドドリア
+        = current_user.name
       .content__left__profile__middle__under__name
-        @kyui
+        = "@" + current_user.nickname
   .content__left__profile__under
     .content__left__profile__under__tweet
       .content__left__profile__under__tweet__text
